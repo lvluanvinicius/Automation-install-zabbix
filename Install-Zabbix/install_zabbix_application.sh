@@ -26,7 +26,7 @@ dependencies() {
     for prog_inst in "${PROGRAMA[@]}";do
         if ! hash "$prog_inst" 2>/dev/null;then
             echo -e "\n\033[00;32mTrying to install dependencies...\033[00m"
-            gnome-terminal --geometry=60x20 --hide-menubar --window -x bash -c "apt-get update && sleep 3 && apt-get install $prog_inst && exit "
+            	apt-get update && sleep 3 && apt-get install $prog_inst && exit 
             sleep 0.5
         else
             sleep 0.5
